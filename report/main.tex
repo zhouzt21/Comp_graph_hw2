@@ -186,7 +186,7 @@ Because no reference normal-light images are available, this report uses no-refe
 
 \subsection{Quantitative Statistics}
 
-Table~\ref{tab:metrics} reports the statistics for all ten images and all three methods. The enhanced results generally increase luminance and entropy compared with the original images, indicating improved visibility and richer intensity distribution.
+Table~\ref{tab:metrics} reports the statistics for all ten images and all three methods. Mean luminance measures overall brightness; luminance standard deviation is used as a simple contrast indicator; entropy measures the richness of the intensity distribution; and mean saturation roughly reflects colorfulness. The bold entries are selected according to metric-specific meanings rather than simply taking the largest number. Mean luminance and luminance standard deviation are treated as bounded preferences, because excessive brightness or contrast can create over-exposure and harsh artifacts; the highlighted values are closer to moderate 8-bit targets used for presentation ($110$ for mean luminance and $50$ for luminance standard deviation). Entropy is highlighted by the larger value because richer intensity distribution is generally desired, although visual inspection is still necessary. For mean saturation, the original row is treated as a reference, and the highlighted processed result is the one that better preserves the original saturation level.
 
 \scriptsize
 \begin{longtable}{llrrrr}
@@ -200,36 +200,45 @@ Image & Method & Mean lum. & Std lum. & Entropy & Mean sat. \\
 Image & Method & Mean lum. & Std lum. & Entropy & Mean sat. \\
 \midrule
 \endhead
-1.bmp & original & 35.073 & 43.160 & 6.3306 & 193.201 \\
+ & original & 35.073 & 43.160 & 6.3306 & 193.201 \\
 1.bmp & baseline & 73.454 & 53.211 & 7.2023 & 144.688 \\
-1.bmp & enhanced & 87.699 & 50.772 & 7.2936 & 153.406 \\
-2.bmp & original & 38.836 & 33.261 & 6.5905 & 155.538 \\
+ & enhanced & \textbf{87.699} & \textbf{50.772} & \textbf{7.2936} & \textbf{153.406} \\
+\midrule
+ & original & 38.836 & 33.261 & 6.5905 & 155.538 \\
 2.bmp & baseline & 91.136 & 48.919 & 7.4615 & 103.190 \\
-2.bmp & enhanced & 105.611 & 50.419 & 7.5546 & 106.594 \\
-3.bmp & original & 42.700 & 22.533 & 6.3970 & 145.013 \\
+ & enhanced & \textbf{105.611} & \textbf{50.419} & \textbf{7.5546} & \textbf{106.594} \\
+\midrule
+ & original & 42.700 & 22.533 & 6.3970 & 145.013 \\
 3.bmp & baseline & 96.263 & 34.044 & 7.1023 & 96.954 \\
-3.bmp & enhanced & 109.483 & 35.112 & 7.1210 & 102.510 \\
-4.bmp & original & 79.075 & 77.125 & 7.0844 & 81.997 \\
-4.bmp & baseline & 119.511 & 73.019 & 7.6633 & 51.931 \\
-4.bmp & enhanced & 121.828 & 71.419 & 7.6701 & 57.754 \\
-5.bmp & original & 49.143 & 39.986 & 6.8645 & 166.478 \\
-5.bmp & baseline & 95.032 & 48.806 & 7.4552 & 121.886 \\
-5.bmp & enhanced & 105.893 & 48.286 & 7.4565 & 131.056 \\
-6.bmp & original & 14.093 & 21.508 & 5.1777 & 196.501 \\
+ & enhanced & \textbf{109.483} & \textbf{35.112} & \textbf{7.1210} & \textbf{102.510} \\
+\midrule
+ & original & 79.075 & 77.125 & 7.0844 & 81.997 \\
+4.bmp & baseline & \textbf{119.511} & 73.019 & 7.6633 & 51.931 \\
+ & enhanced & 121.828 & \textbf{71.419} & \textbf{7.6701} & \textbf{57.754} \\
+\midrule
+ & original & 49.143 & 39.986 & 6.8645 & 166.478 \\
+5.bmp & baseline & 95.032 & \textbf{48.806} & 7.4552 & 121.886 \\
+ & enhanced & \textbf{105.893} & 48.286 & \textbf{7.4565} & \textbf{131.056} \\
+\midrule
+ & original & 14.093 & 21.508 & 5.1777 & 196.501 \\
 6.bmp & baseline & 54.894 & 42.984 & 7.0389 & 122.223 \\
-6.bmp & enhanced & 83.109 & 53.877 & 7.5421 & 138.607 \\
-7.bmp & original & 33.237 & 44.152 & 5.8433 & 124.983 \\
-7.bmp & baseline & 72.594 & 53.954 & 7.0244 & 90.816 \\
-7.bmp & enhanced & 91.430 & 57.880 & 7.4410 & 91.057 \\
-8.bmp & original & 26.345 & 32.159 & 6.0089 & 98.886 \\
+ & enhanced & \textbf{83.109} & \textbf{53.877} & \textbf{7.5421} & \textbf{138.607} \\
+\midrule
+ & original & 33.237 & 44.152 & 5.8433 & 124.983 \\
+7.bmp & baseline & 72.594 & \textbf{53.954} & 7.0244 & 90.816 \\
+ & enhanced & \textbf{91.430} & 57.880 & \textbf{7.4410} & \textbf{91.057} \\
+\midrule
+ & original & 26.345 & 32.159 & 6.0089 & 98.886 \\
 8.bmp & baseline & 69.836 & 46.912 & 7.1721 & 59.212 \\
-8.bmp & enhanced & 93.860 & 52.343 & 7.4084 & 63.583 \\
-9.bmp & original & 27.479 & 57.286 & 4.3257 & 197.198 \\
+ & enhanced & \textbf{93.860} & \textbf{52.343} & \textbf{7.4084} & \textbf{63.583} \\
+\midrule
+ & original & 27.479 & 57.286 & 4.3257 & 197.198 \\
 9.bmp & baseline & 52.658 & 57.290 & 5.9571 & 149.841 \\
-9.bmp & enhanced & 70.726 & 56.473 & 6.4067 & 169.195 \\
-10.bmp & original & 18.132 & 19.848 & 5.6238 & 78.261 \\
-10.bmp & baseline & 64.355 & 40.028 & 7.1134 & 43.434 \\
-10.bmp & enhanced & 92.464 & 46.485 & 7.4087 & 39.690 \\
+ & enhanced & \textbf{70.726} & \textbf{56.473} & \textbf{6.4067} & \textbf{169.195} \\
+\midrule
+ & original & 18.132 & 19.848 & 5.6238 & 78.261 \\
+10.bmp & baseline & 64.355 & 40.028 & 7.1134 & \textbf{43.434} \\
+ & enhanced & \textbf{92.464} & \textbf{46.485} & \textbf{7.4087} & 39.690 \\
 \bottomrule
 \end{longtable}
 \normalsize

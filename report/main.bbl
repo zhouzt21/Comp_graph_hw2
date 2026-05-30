@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{land1971retinex}
+E.~H. Land and J.~J. McCann, ``Lightness and retinex theory,'' {\em Journal of
+  the Optical Society of America}, vol.~61, no.~1, pp.~1--11, 1971.
+
+\bibitem{guo2016lime}
+X.~Guo, Y.~Li, and H.~Ling, ``Lime: Low-light image enhancement via
+  illumination map estimation,'' {\em IEEE Transactions on Image Processing},
+  vol.~26, no.~2, pp.~982--993, 2017.
+
+\bibitem{zuiderveld1994clahe}
+K.~Zuiderveld, ``Contrast limited adaptive histogram equalization,'' in {\em
+  Graphics Gems IV}, pp.~474--485, Academic Press Professional, 1994.
+
+\bibitem{opencvclahe}
+{OpenCV}, ``{OpenCV} clahe documentation.''
+  \url{https://docs.opencv.org/4.x/d6/db6/classcv_1_1CLAHE.html}.
+\newblock Accessed 2026-05-30.
+
+\end{thebibliography}

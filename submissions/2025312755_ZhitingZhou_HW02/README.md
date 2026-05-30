@@ -8,6 +8,7 @@ Student ID: 2025312755
 
 - `report/2025312755_ZhitingZhou_HW02_Report.pdf`: final report.
 - `code/enhance_low_light.py`: Python implementation.
+- `inputs/LowIllumination/`: input images used for this task.
 - `outputs/enhanced/`: enhanced images.
 - `outputs/baseline/`: baseline results.
 - `outputs/comparisons/`: original/baseline/enhanced comparison images.
@@ -17,7 +18,7 @@ Student ID: 2025312755
 ## Run
 
 ```powershell
-python code/enhance_low_light.py --input "release/inputs for coding project/LowIllumination" --output outputs
+python code/enhance_low_light.py --input "inputs/LowIllumination" --output outputs_rerun
 ```
 
 The implementation uses Python, OpenCV, and NumPy.
